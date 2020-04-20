@@ -5,6 +5,8 @@
 
 静态文件cdn
 
-## 文件列表
+## 最新文件列表
 
-https://cdn.jsdelivr.net/gh/cooldev-cn/cdn/
+带上`@latest`实时更新缓存
+
+https://cdn.jsdelivr.net/gh/cooldev-cn/cdn@latest/
