@@ -21,11 +21,22 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           compressOnly: true
-      - name: Create New Pull Request If Needed
-        if: steps.calibre.outputs.markdown != ''
-        uses: peter-evans/create-pull-request@v3
+#      - name: Create New Pull Request If Needed
+#        if: steps.calibre.outputs.markdown != ''
+#        uses: peter-evans/create-pull-request@v3
+#        with:
+#          title: Compressed Images
+#          branch-suffix: timestamp
+#          commit-message: Compressed Images
+#          body: ${{ steps.calibre.outputs.markdown }}
+      - name: 提交文件到当前仓库
+        run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+
+        git commit -m "🤖: Compressed Images" -a
+      - name: Push更新到当前仓库
+        uses: ad-m/github-push-action@master
         with:
-          title: Compressed Images
-          branch-suffix: timestamp
-          commit-message: Compressed Images
-          body: ${{ steps.calibre.outputs.markdown }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
