@@ -1,9 +1,6 @@
-# cdn
+# 静态文件cdn
 
-[![](https://data.jsdelivr.com/v1/package/gh/cooldev-cn/cdn/badge?style=rounded)](https://www.jsdelivr.com/package/gh/cooldev-cn/cdn)[![Compress Images Action](https://github.com/cooldev-cn/cdn/actions/workflows/optimize-image-actions.yml/badge.svg?branch=main)](https://github.com/cooldev-cn/cdn/actions/workflows/optimize-image-actions.yml)
-
-
-静态文件cdn
+[![](https://data.jsdelivr.com/v1/package/gh/cooldev-cn/cdn/badge?style=rounded)](https://www.jsdelivr.com/package/gh/cooldev-cn/cdn) [![Compress Images Action](https://github.com/cooldev-cn/cdn/actions/workflows/optimize-image-actions.yml/badge.svg?branch=main)](https://github.com/cooldev-cn/cdn/actions/workflows/optimize-image-actions.yml)
 
 ## 最新文件列表
 
