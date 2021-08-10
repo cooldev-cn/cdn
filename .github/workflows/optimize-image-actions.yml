@@ -35,7 +35,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "🤖: Compressed Images" -a
+          git commit -m "🤖: Compressed Images \n ${{ steps.calibre.outputs.markdown }}" -a
       - name: Push更新到当前仓库
         if: steps.calibre.outputs.markdown != ''
         uses: ad-m/github-push-action@master
