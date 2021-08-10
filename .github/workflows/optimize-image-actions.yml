@@ -30,13 +30,14 @@ jobs:
 #          commit-message: Compressed Images
 #          body: ${{ steps.calibre.outputs.markdown }}
       - name: 提交文件到当前仓库
+        if: steps.calibre.outputs.markdown != ''
         run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add .
-
-        git commit -m "🤖: Compressed Images" -a
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "🤖: Compressed Images" -a
       - name: Push更新到当前仓库
+        if: steps.calibre.outputs.markdown != ''
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
